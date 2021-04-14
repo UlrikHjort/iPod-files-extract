@@ -51,11 +51,11 @@ for f in filelist:
 
 for ipod_file, track in files.items():
     performer=track.get('Performer','PERFORMER-NULL')
-    album=track.get('Album',"ALBUM-BULL")
+    album=track.get('Album',"ALBUM-NULL")
     PATH = DEST_DIR+performer+"/"+album
     pathlib.Path(PATH).mkdir(parents=True, exist_ok=True)
     position = ("{:02d}".format(int(track.get('Track name/Position','0')))) # Add leading zero
-    trackname=track.get('Track name','TRACK+NULL').replace('/', '-') # replace "/" in track name
+    trackname=track.get('Track name','TRACK-NULL').replace('/', '-') # replace "/" in track name
     new_file = PATH +"/" + position + "-" + trackname + ".mp3" 
     copyfile(ipod_file, new_file)
     
