@@ -1,4 +1,4 @@
-Script that extract music files from an ipod and store it in the following structure:
+Script for extracting music files from an ipod and store it in the following structure:
 
 	ARTIST_DIR/ALBUM_DIR/xx-SONG.mp3
 
